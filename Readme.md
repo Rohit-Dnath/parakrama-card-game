@@ -13,6 +13,12 @@ The game is also inspired by Blizzard Entertainment's **Hearthstone**, adapting 
 
 ---
 
+## 🌐 Live Link
+
+Check out the live version of the game here: [https://parakrama-card-game.vercel.app/](https://parakrama-card-game.vercel.app/)
+
+---
+
 ## 🚀 What I Built
 
 This is a prompt-based card battle game with:
@@ -62,13 +68,15 @@ Below are some screenshots of the game in action:
 
 ---
 
-The following images were created with OpenAI ChatGPT Image Creation Tool:
+The images used in the game were created with OpenAI ChatGPT Image Creation Tool:
 
 <p align="center">
   <img src="public/Readme/5.png" alt="AI Image 5" width="400"/>
   <img src="public/Readme/6.png" alt="AI Image 6" width="400"/>
   <img src="public/Readme/7.png" alt="AI Image 7" width="400"/>
   <img src="public/Readme/8.png" alt="AI Image 8" width="400"/>
+  <img src="public/Readme/9.png" alt="AI Image 8" width="400"/>
+  <img src="public/Readme/10.png" alt="AI Image 8" width="400"/>
 </p>
 
 ---
