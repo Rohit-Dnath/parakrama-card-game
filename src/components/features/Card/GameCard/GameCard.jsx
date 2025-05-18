@@ -58,6 +58,10 @@ export default function GameCard({ position, card, player, deg }) {
             src="/cards/card-images/blank.png"
             alt="game card"
             className="game-card-frame"
+            onClick={() => {
+              const audio = new Audio('src/assets/card-sound.mp3');
+              audio.play();
+            }}
           />
 
           <span className="absolute card-cost">{card.cardCost}</span>

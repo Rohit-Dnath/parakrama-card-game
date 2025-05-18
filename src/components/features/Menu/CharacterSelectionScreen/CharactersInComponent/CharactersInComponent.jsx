@@ -5,6 +5,14 @@ export default function CharactersInComponent({
   handleCharacterPackHover,
   handleCharacterPackLeave,
 }) {
+  const playClickSound = () => {
+    const audio = new Audio("src/assets/card-sound.mp3");
+    audio.play();
+  };
+  const playHoverSound = () => {
+    const audio = new Audio("src/assets/hover.mp3");
+    audio.play();
+  };
   const handleBorder = (characterPack) => {
     if (characters[0] === characterPack) {
       return "0 0 5px 0 gold"; // Only bottom border
@@ -13,8 +21,14 @@ export default function CharactersInComponent({
   };
   return (
     <div
-      onClick={() => handleCharacterPackChange(characterPack)}
-      onMouseOver={() => handleCharacterPackHover(characterPack)}
+      onClick={() => {
+        playClickSound();
+        handleCharacterPackChange(characterPack);
+      }}
+      onMouseOver={() => {
+        playHoverSound();
+        handleCharacterPackHover(characterPack);
+      }}
       onMouseLeave={handleCharacterPackLeave}
       style={{ display: 'inline-block', cursor: 'pointer', margin: '7px 16px 0 16px' }} // Increased margin above cards
     >

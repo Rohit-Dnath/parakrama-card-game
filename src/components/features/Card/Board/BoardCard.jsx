@@ -65,7 +65,14 @@ export default function BoardCard({ position, boardCard }) {
         borderRadius: "46%",
       }}
     >
-      <img src="/cards/card-images/board_blank.png" className="board-frame" />
+      <img 
+        src="/cards/card-images/board_blank.png" 
+        className="board-frame" 
+        onMouseOver={() => {
+          const audio = new Audio('src/assets/card-hover.mp3');
+          audio.play();
+        }}
+      />
       <img
         className="board-card-image absolute"
         src={`/cards/card-images/${boardCard?.cardPack}/${boardCard?.cardImageName}.png`}

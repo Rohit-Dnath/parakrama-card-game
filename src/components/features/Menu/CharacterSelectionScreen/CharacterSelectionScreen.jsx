@@ -47,6 +47,12 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
     [characters, characterPack]
   );
 
+  // Add a function to play the click sound
+  const playClickSound = () => {
+    const audio = new Audio("src/assets/click.wav");
+    audio.play();
+  };
+
   const startGame = () => {
     const [char1, char2] = characters;
     if (char1 && char2) {
@@ -97,7 +103,10 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
         <button
           className="select-game-mode-button relative px-10 py-5 rounded-2xl bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 shadow-lg hover:from-yellow-400 hover:to-yellow-600 transition-all duration-200 border-4 border-yellow-600 text-3xl font-extrabold text-gray-900 tracking-wide"
           style={{ minWidth: 340 }}
-          onClick={() => setSelectGameMode(false)}
+          onClick={() => {
+            playClickSound();
+            setSelectGameMode(false);
+          }}
         >
           <span
             className="text-black text-3xl drop-shadow-lg"
@@ -139,13 +148,19 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
           <div className="flex flex-col items-center ml-12 mt-8">
             <button
               className="start-game-button mb-4"
-              onClick={startGame}
+              onClick={() => {
+                playClickSound();
+                startGame();
+              }}
             >
               <span className="text-black text-xl">{t("start")}</span>
             </button>
             <button
               className="start-game-button"
-              onClick={handleResetAndGoBack}
+              onClick={() => {
+                playClickSound();
+                handleResetAndGoBack();
+              }}
             >
               <span className="text-black text-xl">{t("goBack")}</span>
             </button>

@@ -80,6 +80,17 @@ export default function Menu() {
     }
   };
 
+  // Add a function to play the click sound
+  const playClickSound = () => {
+    const audio = new Audio("src/assets/click.wav");
+    audio.play();
+  };
+  // Add a function to play the hover sound
+  const playHoverSound = () => {
+    const audio = new Audio("src/assets/hover.mp3");
+    audio.play();
+  };
+
   if (!resourcesLoaded) {
     return <LoadingScreenWithProgress />;
   }
@@ -126,7 +137,11 @@ export default function Menu() {
           />
           {/* START button (position unchanged) */}
           <p
-            onClick={() => dispatchGameState("characterSelection")}
+            onClick={() => {
+              playClickSound();
+              dispatchGameState("characterSelection");
+            }}
+            onMouseOver={playHoverSound}
             className="px-4 py-2 menu-item"
             style={{
               color: "#182c39", 

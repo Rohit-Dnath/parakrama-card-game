@@ -46,7 +46,19 @@ export default function EndTurnButton() {
     dispatch(syncCardBaseLenght());
   }, [dispatch]);
 
+  // Add a function to play the click sound
+  const playClickSound = () => {
+    const audio = new Audio("src/assets/click.wav");
+    audio.play();
+  };
+  // Add a function to play the hover sound
+  const playHoverSound = () => {
+    const audio = new Audio("src/assets/hover.mp3");
+    audio.play();
+  };
+
   const onEndTurnButtonClick = async () => {
+    playClickSound();
     if (isClientTurn === true) {
       dispatchActions([
         advanceScenarioMove(),
@@ -163,6 +175,7 @@ export default function EndTurnButton() {
         }}
         className="end-turn-button m-3"
         onClick={onEndTurnButtonClick}
+        onMouseOver={playHoverSound}
       ></button>
     </div>
   );
