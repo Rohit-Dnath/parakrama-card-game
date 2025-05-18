@@ -1,0 +1,78 @@
+.profile {
+  height: 112px;
+  width: 96px;
+}
+.image-container {
+  height: 111px;
+}
+
+.armor-bar-text {
+  font-size: 23px;
+  margin-bottom: 4.2px;
+  margin-left: 9px;
+}
+
+.armor-bar {
+  width: 36px;
+  z-index: 1;
+  top: 65px;
+  right: -12px;
+}
+
+.armor-bar-image {
+  bottom: -15px;
+  right: -4px;
+}
+
+.health-bar-text {
+  font-size: 21px;
+  margin-bottom: 1px;
+  margin-left: 6px;
+}
+
+.health-bar {
+  width: 29px;
+  z-index: 0;
+  bottom: -11px;
+  right: -10px;
+}
+
+.health-bar-image {
+  bottom: -7px;
+  right: -3px;
+}
+
+@media (max-height: 768px) {
+  .image-container {
+    width: 48px;
+  }
+  .profile {
+    left: -69px;
+    bottom: 533px;
+  }
+  .health-bar {
+    width: 22px;
+    z-index: 1;
+    bottom: 41px;
+    right: 37px;
+  }
+  .health-bar-text {
+    font-size: 1.9rem;
+    margin-bottom: -1px;
+    margin-left: 5px;
+  }
+  .armor-bar {
+    width: 23px;
+    z-index: 1;
+    top: 28px;
+    right: 37px;
+  }
+  .armor-bar-image {
+    font-size: 2rem;
+    margin-bottom: 7px;
+    margin-left: 9px;
+  }
+  .armor-bar-text {
+    font-size: 1.7rem;
+  }
+}

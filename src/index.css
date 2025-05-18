@@ -1,0 +1,37 @@
+html{
+  cursor: pointer;
+  cursor: help;
+  cursor: progress;
+
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23FF540F" stroke-width="3.25" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>'), auto;
+}
+
+body {
+  background-image: url("/bg-dark.png");
+  background-color: #200d27;
+ 
+  margin: 0 auto;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+
+
+.board {
+  position: relative;
+  box-shadow: rgba(0, 0, 20, 0.75) 3px 3px 44px 38px,
+    rgba(0, 10, 50, 0.75) 3px 3px 39px 41px, rgba(0, 0, 0, 1) 0px 0px 0px 1px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 849px;
+  width: 1421px;
+  margin-left: 180px;
+  margin-top: 71px;
+}
+
+.deck-position {
+  background: red;
+  left: 494px;
+  top: 706px;
+  width: 367px;
+}

@@ -1,0 +1,71 @@
+.board-card {
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.board-card-image {
+  clip-path: ellipse(46% 49% at 47% 45%);
+  height: 117px;
+  width: 96px;
+  z-index: -1;
+  top: 6px;
+  left: 2px;
+}
+
+.board-frame {
+  width: 89px;
+  min-width: 89px;
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+
+.board-card-attack {
+  position: absolute;
+  font-weight: 700;
+  bottom: 13px;
+  left: 13px;
+  font-size: 1.7rem;
+}
+
+.board-card-health {
+  position: absolute;
+  bottom: 11px;
+  right: 10px;
+  font-size: 1.7rem;
+}
+@media (max-height: 768px) {
+  .board-card {
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+
+  .board-card-image {
+    
+    height: 59px;
+    width: 96px;
+    top: 3px;
+  }
+
+  .board-frame {
+    width: 46px;
+    min-width: 46px;
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+
+  .board-card-attack {
+    bottom: 5px;
+    left: 5px;
+    font-size: 1.4rem;
+  }
+
+  .board-card-health {
+    bottom: 5px;
+    right: 5px;
+    font-size: 1.4rem;
+  }
+}

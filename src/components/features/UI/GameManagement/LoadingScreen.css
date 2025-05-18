@@ -1,0 +1,17 @@
+.loading-screen {
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 62vw;
+  background-color: #AA6039;
+  z-index: 20;
+}
+
+.loading-items{
+ padding-top: 10%;
+}
+
+.loading {
+  color: #000;
+}
