@@ -99,7 +99,17 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
           style={{ minWidth: 340 }}
           onClick={() => setSelectGameMode(false)}
         >
-          <span className="text-black text-3xl drop-shadow-lg">{t("Play With Computer")}</span>
+          <span
+            className="text-black text-3xl drop-shadow-lg"
+            style={{
+              background: "#ffe066",
+              borderRadius: "12px",
+              padding: "0.25em 0.75em",
+              boxShadow: "0 2px 8px #fff8, 0 1px 1px #0002"
+            }}
+          >
+            {t("Play With Computer")}
+          </span>
         </button>
       </div>
     </>

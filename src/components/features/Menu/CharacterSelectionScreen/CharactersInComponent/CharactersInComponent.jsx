@@ -7,9 +7,7 @@ export default function CharactersInComponent({
 }) {
   const handleBorder = (characterPack) => {
     if (characters[0] === characterPack) {
-      return "2px solid gold";
-    } else if (characters[1] === characterPack) {
-      return "2px solid white";
+      return "3px solid gold";
     }
     return "none";
   };
