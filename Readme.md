@@ -45,6 +45,9 @@ provided by the hackathon organizers.
 
 Below are some screenshots of the game in action:
 
+| Game Board | Card Selection | Health Bars |
+|------------|---------------|-------------|
+| ![](public/Readme/game-board.png) | ![](public/Readme/card-selection.png) | ![](public/Readme/health-bars.png) |
 
 ---
 
@@ -56,3 +59,4 @@ Special thanks to the organizers for the exciting prompt and opportunity!
 ---
 
 Enjoy the game and may the best strategist win!
+````
