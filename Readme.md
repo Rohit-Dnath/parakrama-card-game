@@ -1,4 +1,4 @@
-# Parakrama - The Card Battle Game
+# Parakrama - The Card Battle Game (Built on CodeCircuit Vibe Coding Hackathon)
 
 Welcome to **Parakrama Card Battle Game** – a dynamic card battle game featuring health bars, turn-based logic, and engaging gameplay!  
 This project was built as part of the **CodeCircuit Vibe Coding Hackathon**.
