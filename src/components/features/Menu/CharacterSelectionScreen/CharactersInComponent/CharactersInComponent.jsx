@@ -7,7 +7,7 @@ export default function CharactersInComponent({
 }) {
   const handleBorder = (characterPack) => {
     if (characters[0] === characterPack) {
-      return "3px solid gold";
+      return "0 0 5px 0 gold"; // Only bottom border
     }
     return "none";
   };
@@ -22,7 +22,8 @@ export default function CharactersInComponent({
         width="140"
         height="200"
         style={{
-          border: handleBorder(characterPack),
+          border: 'none',
+          borderBottom: handleBorder(characterPack) !== 'none' ? '4px solid gold' : 'none',
           transition: 'transform 0.2s',
           display: 'block',
           width: '140px',
