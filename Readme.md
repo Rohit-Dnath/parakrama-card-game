@@ -22,7 +22,7 @@ provided by the hackathon organizers.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/parakrama-card-game.git
+   git clone https://github.com/rohit-dnath/parakrama-card-game.git
    cd parakrama-card-game
    ```
 
