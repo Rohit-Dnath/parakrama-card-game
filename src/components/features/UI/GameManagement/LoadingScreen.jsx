@@ -9,7 +9,7 @@ export default function LoadingScreen() {
       <img
         src="/menu/loading/parakrama.png"
         alt="Parākrama"
-        className="w-64 h-auto mb-8 animate-pulse"
+        className="w-96 h-auto mb-8 animate-pulse" // Increased from w-64 to w-96
       />
       <h1 className="text-5xl font-bold mb-4">{t("loading")}...</h1>
 

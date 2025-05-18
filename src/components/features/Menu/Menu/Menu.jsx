@@ -106,14 +106,39 @@ export default function Menu() {
 
   return (
     gameState === "menu" && (
-      <div className="bg-outer absolute z-20">
+      <div className="bg-outer absolute z-20" >
         {/* Add character floating components only when in menu state */}
         <CharacterFloating side="left" image="/bhima-full.png" />
         <CharacterFloating side="right" image="/tara-full.png" />
         <div className="menu flex flex-col items-center justify-center text-center space-y-4 gap-3">
+          {/* Logo at the very top */}
+          <img
+            src="/parakrama.png"
+            alt="Parakrama"
+            style={{
+              width: "420px", // Increased from 320px to 420px
+              maxWidth: "98vw", // Slightly increased for responsiveness
+              marginTop: "-33.5rem", // Move logo much higher
+              marginBottom: "1rem",
+              filter: "drop-shadow(0 4px 16px #fff8)",
+              
+            }}
+          />
+          {/* START button (position unchanged) */}
           <p
             onClick={() => dispatchGameState("characterSelection")}
-            className="px-4 py-2 text-white menu-item"
+            className="px-4 py-2 menu-item"
+            style={{
+              color: "#182c39", 
+              fontWeight: "bold",
+              fontSize: "2rem",
+              textShadow: "0 2px 8px #fff, 0 1px 1px #000",
+              borderRadius: "12px",
+              cursor: "pointer",
+              transition: "color 0.2s",
+              marginTop: "0",
+              marginBottom: "1rem"
+            }}
           >
             {t("START")}
           </p>

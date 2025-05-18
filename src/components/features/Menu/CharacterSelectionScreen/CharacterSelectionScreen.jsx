@@ -25,23 +25,26 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
     setLastSelectedCharacterPack(null);
   };
   const handleCharacterPackChange = useCallback(
-    (characterPack) => {
+    (selectedPack) => {
       const [char1, char2] = characters;
-
-      const newCharacters =
-        !char1 && !char2
-          ? [characterPack, null]
-          : characterPack === char1 && !char2
-          ? [null, null]
-          : char2
-          ? characterPack === char2
-            ? [null, null]
-            : [char1, null]
-          : [char1, characterPack];
-
-      setCharacters(newCharacters);
+      // If nothing is selected, set selected as player1, and auto-assign the other as player2
+      if (!char1 && !char2) {
+        // Find the other character
+        const allPacks = Object.keys(characterPack);
+        const otherPack = allPacks.find((pack) => pack !== selectedPack);
+        setCharacters([selectedPack, otherPack]);
+      } else if (char1 === selectedPack) {
+        // Deselect if clicking the same as player1
+        setCharacters([null, null]);
+      } else if (char2 === selectedPack) {
+        // If clicking player2, make it player1 and swap
+        setCharacters([selectedPack, char1]);
+      } else {
+        // If clicking a new character, make it player1 and previous player1 becomes player2
+        setCharacters([selectedPack, char1]);
+      }
     },
-    [characters]
+    [characters, characterPack]
   );
 
   const startGame = () => {
@@ -90,12 +93,13 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
 
   const renderGameModeSelection = () => (
     <>
-      <div className="flex flex-row justify-center items-center">
+      <div className="flex flex-row justify-center items-center w-full mt-8">
         <button
-          className="select-game-mode-button absolute mt-1"
+          className="select-game-mode-button relative px-10 py-5 rounded-2xl bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-500 shadow-lg hover:from-yellow-400 hover:to-yellow-600 transition-all duration-200 border-4 border-yellow-600 text-3xl font-extrabold text-gray-900 tracking-wide"
+          style={{ minWidth: 340 }}
           onClick={() => setSelectGameMode(false)}
         >
-          <span className="text-black text-xl">{t("playWithComputer")}</span>
+          <span className="text-black text-3xl drop-shadow-lg">{t("Play With Computer")}</span>
         </button>
       </div>
     </>
@@ -118,8 +122,8 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
           ))}
         </div>
       </div>
-      {/* Buttons on the right side */}
-      {!characters.includes(null) &&
+      {/* Buttons on the right side: show if at least one card is selected */}
+      {!(characters[0] === null && characters[1] === null) &&
         !selectGameMode &&
         !clickAdventureMode && (
           <div className="flex flex-col items-center ml-12 mt-8">
@@ -141,9 +145,18 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
   );
 
   return (
-    <div className="character-selection-screen absolute z-25">
-      <div className="middle-image absolute">
-        <img src="/menu/loading/parakrama.png" alt="Parākrama" />
+    <div className="character-selection-screen absolute z-25 flex flex-col items-center w-full min-h-screen bg-transparent">
+      {/* Large and centered logo at the top */}
+      <div className="w-full flex justify-center mt-8 mb-8">
+        <img
+          src="/menu/loading/parakrama.png"
+          alt="Parākrama"
+          style={{
+            width: "600px",
+            maxWidth: "98vw",
+            filter: "drop-shadow(0 8px 32px #0008)",
+          }}
+        />
       </div>
       <img
         width="33px"
@@ -166,8 +179,8 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
         {renderCharacterImage(characters[1], 2)}
       </div>
 
-      <div className="mini-container flex flex-row justify-center items-center">
-        <div className="select-character text-2xl font-bold mt-10 absolute p-select flex flex-col">
+      <div className="mini-container flex flex-row justify-center items-center w-full">
+        <div className="select-character text-2xl font-bold mt-10 absolute p-select flex flex-col w-full items-center">
           {selectGameMode && renderGameModeSelection()}
           {!selectGameMode && !clickAdventureMode && renderCharacterSelection()}
         </div>
@@ -186,7 +199,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
               src={`/cards/card-images/${lastSelectedCharacterPack}/${lastSelectedCharacterPack}.png`}
               alt="selected-character"
             />
-            <div className="absolute mini-character-text-container flex justify-end items-center justify-center w-[200px]">
+            <div className="absolute mini-character-text-container flex items-center justify-center w-[200px]">
               <h3 className="mini-character-title text-center">
                 {lastSelectedCharacterPack
                   .split("-")
