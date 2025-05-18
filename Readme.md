@@ -72,7 +72,7 @@ The images used in the game were created with OpenAI ChatGPT Image Creation Tool
 
 <div align="center" style="display: flex; flex-wrap: wrap; gap: 16px; justify-content: center;">
   <img src="public/Readme/5.png" alt="AI Image 5" width="300" style="margin: 8px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);"/>
-  <img src="public/Readme/6.png" alt="AI Image 6" width="300" style="margin: 8px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);"/>
+  <img src="public/Readme/11.png" alt="AI Image 6" width="300" style="margin: 8px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);"/>
   <img src="public/Readme/7.png" alt="AI Image 7" width="300" style="margin: 8px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);"/>
   <img src="public/Readme/8.png" alt="AI Image 8" width="300" style="margin: 8px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);"/>
   <img src="public/Readme/9.png" alt="AI Image 9" width="300" style="margin: 8px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.15);"/>
