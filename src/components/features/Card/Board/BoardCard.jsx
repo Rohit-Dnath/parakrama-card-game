@@ -70,6 +70,7 @@ export default function BoardCard({ position, boardCard }) {
         className="board-frame" 
         onMouseOver={() => {
           const audio = new Audio('src/assets/card-hover.mp3');
+          
           audio.play();
         }}
       />
