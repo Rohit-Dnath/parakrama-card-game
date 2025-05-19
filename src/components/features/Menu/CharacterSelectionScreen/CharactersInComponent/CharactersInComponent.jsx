@@ -31,17 +31,16 @@ export default function CharactersInComponent({
       }}
       onMouseLeave={handleCharacterPackLeave}
       style={{ display: 'inline-block', cursor: 'pointer', margin: '7px 16px 0 16px' }} // Increased margin above cards
-    >
-      <img
-        width="140"
-        height="200"
+    >      <img
+        width="120"
+        height="170"
         style={{
           border: 'none',
           borderBottom: handleBorder(characterPack) !== 'none' ? '4px solid gold' : 'none',
           transition: 'transform 0.2s',
           display: 'block',
-          width: '140px',
-          height: '200px',
+          width: '120px',
+          height: '170px',
           objectFit: 'cover',
         }}
         className="character-pack-img"
