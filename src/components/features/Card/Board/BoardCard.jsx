@@ -69,7 +69,7 @@ export default function BoardCard({ position, boardCard }) {
         src="/cards/card-images/board_blank.png" 
         className="board-frame" 
         onMouseOver={() => {
-          const audio = new Audio('public/sounds/card-hover.mp3');
+          const audio = new Audio('/sounds/card-hover.mp3');
           
           audio.play();
         }}

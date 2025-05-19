@@ -49,7 +49,7 @@ export default function CharacterSelectionScreen({ dispatchGameState }) {
 
   // Add a function to play the click sound
   const playClickSound = () => {
-    const audio = new Audio("public/sounds/click.wav");
+    const audio = new Audio("/sounds/click.wav");
     audio.play();
   };
 

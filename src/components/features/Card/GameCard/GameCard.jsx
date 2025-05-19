@@ -59,7 +59,7 @@ export default function GameCard({ position, card, player, deg }) {
             alt="game card"
             className="game-card-frame"
             onClick={() => {
-              const audio = new Audio('public/sounds/card-sound.mp3');
+              const audio = new Audio('/sounds/card-sound.mp3');
               audio.play();
             }}
           />
