@@ -6,11 +6,11 @@ export default function CharactersInComponent({
   handleCharacterPackLeave,
 }) {
   const playClickSound = () => {
-    const audio = new Audio("src/assets/card-sound.mp3");
+    const audio = new Audio("public/sounds/card-sound.mp3");
     audio.play();
   };
   const playHoverSound = () => {
-    const audio = new Audio("src/assets/hover.mp3");
+    const audio = new Audio("public/sounds/hover.mp3");
     audio.play();
   };
   const handleBorder = (characterPack) => {

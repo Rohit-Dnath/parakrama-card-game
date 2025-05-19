@@ -82,12 +82,12 @@ export default function Menu() {
 
   // Add a function to play the click sound
   const playClickSound = () => {
-    const audio = new Audio("src/assets/click.wav");
+    const audio = new Audio("public/sounds/click.wav");
     audio.play();
   };
   // Add a function to play the hover sound
   const playHoverSound = () => {
-    const audio = new Audio("src/assets/hover.mp3");
+    const audio = new Audio("public/sounds/hover.mp3");
     audio.play();
   };
 
